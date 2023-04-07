@@ -9,4 +9,5 @@ COPY --from=builder /build/chatgpt-telegram /bin/chatgpt-telegram
 RUN chmod +x /bin/chatgpt-telegram
 RUN mkdir /root/.config/
 RUN touch /root/.config/chatgpt.json
+RUN chmod +x /root/.config
 ENTRYPOINT ["/bin/chatgpt-telegram"]
